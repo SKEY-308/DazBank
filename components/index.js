@@ -1,3 +1,13 @@
 export { default as images } from './images';
 export { default as styles } from './styles';
-export { default as layout } from './layout';
+export { default as Layout } from './Layout';
+export { default as NavBar } from './NavBar';
+export { default as Banner } from './Banner';
+export { default as Footer } from './Footer';
+export { default as Stats } from './Stats';
+export { default as Business } from './Business';
+export { default as Billing } from './Billing';
+export { default as CardDeal } from './CardDeal';
+export { default as Testimonials } from './Testimonials';
+export { default as Clients } from './Clients';
+export { default as CTA } from './CTA'; 
