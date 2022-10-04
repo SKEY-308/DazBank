@@ -1,4 +1,4 @@
-export { default as images } from './images';
+// export { default as images } from './images';
 export { default as styles } from './styles';
 export { default as Layout } from './Layout';
 export { default as NavBar } from './NavBar';
@@ -10,4 +10,4 @@ export { default as Billing } from './Billing';
 export { default as CardDeal } from './CardDeal';
 export { default as Testimonials } from './Testimonials';
 export { default as Clients } from './Clients';
-export { default as CTA } from './CTA'; 
+export { default as CTA } from './CTA';
