@@ -21,11 +21,11 @@ const NavBar = () => {
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
 
-            <h1 className="text-white cursor-pointer text-[30px]">
+            <h2 className="text-white cursor-pointer text-[25px]">
                 <Link href='/'>
                     DazBank
                 </Link>
-            </h1>
+            </h2>
 
 
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -66,20 +66,15 @@ const NavBar = () => {
 
                     <ul className="list-none flex justify-end items-start flex-1 flex-col">
                         { navlinks.map((nav, index) => (
-                            <Link
-                                href={ `#${nav}` }
+                            <li
                                 key={ index }
-                                className={ `font-medium cursor-pointer text-[16px] ${active === nav ? "text-white" : "text-dimWhite"
-                                    } ${index === navlinks.length - 1 ? "mb-0" : "mb-4"}` }
-
+                                className={ `font-medium cursor-pointer text-[16px] ${index === navlinks.length - 1 ? "mb-0" : "mb-4"} text-white` }
                             >
-                                <a onClick={ () => setActive(nav) }>
-
+                                <Link href={ `#${nav}` }>
                                     { nav }
+                                </Link>
 
-                                </a>
-
-                            </Link>
+                            </li>
                         )) }
                     </ul>
                 </div>
