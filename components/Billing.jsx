@@ -6,7 +6,7 @@ import images from './images'
 import { urlFor } from '../lib/client';
 
 const Billing = ({ billbanner }) => {
-    const { content, icon, image, title } = billbanner
+    const { content, image } = billbanner
 
     return (
         <section id="Products" className={ layout.sectionReverse }>
