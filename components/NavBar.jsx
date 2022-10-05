@@ -67,8 +67,10 @@ const NavBar = () => {
                     <ul className="list-none flex justify-end items-start flex-1 flex-col">
                         { navlinks.map((nav, index) => (
                             <li
+                                onClick={ () => setActive(nav) }
                                 key={ index }
-                                className={ `font-medium cursor-pointer text-[16px] ${index === navlinks.length - 1 ? "mb-0" : "mb-4"} text-white` }
+                                className={ `font-medium cursor-pointer text-[16px] ${index === navlinks.length - 1 ? "mb-0" : "mb-4"} ${active === nav ? "text-white" : "text-dimWhite"
+                                    }` }
                             >
                                 <Link href={ `#${nav}` }>
                                     { nav }
