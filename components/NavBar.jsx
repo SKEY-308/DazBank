@@ -17,6 +17,11 @@ const NavBar = () => {
     const [toggle, setToggle] = useState(false);
 
 
+    const handleClick = () => {
+        setToggle(false)
+    }
+
+
 
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
@@ -67,7 +72,7 @@ const NavBar = () => {
                     <ul className="list-none flex justify-end items-start flex-1 flex-col">
                         { navlinks.map((nav, index) => (
                             <li
-                                onClick={ () => setActive(nav) }
+                                onClick={ () => handleClick() }
                                 key={ index }
                                 className={ `font-medium cursor-pointer text-[16px] ${index === navlinks.length - 1 ? "mb-0" : "mb-4"} ${active === nav ? "text-white" : "text-dimWhite"
                                     }` }
