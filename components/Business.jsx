@@ -23,7 +23,7 @@ const Business = ({ bsbanner }) => {
                     { content }
                 </p>
 
-                <button type="button" className={ `py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${`mt-10`}` }>
+                <button type="button" className={ `py-4 px-6 font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${`mt-10`}` }>
                     Get Started
                 </button>
 
@@ -36,7 +36,7 @@ const Business = ({ bsbanner }) => {
                     <div
                         key={ index }
                         className={ `flex flex-row p-6 rounded-[20px]
-                         ${feat._id !== bfeat.length - 1 ? "mb-6" : "mb-0"} feature-card` }
+                         ${index !== bfeat.length - 1 ? "mb-6" : "mb-0"} feature-card` }
                     >
 
                         <div className={ `w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue` }>
