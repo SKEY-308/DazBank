@@ -2,6 +2,7 @@ import React from 'react'
 import { Banner, styles, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA } from '../components'
 
 import { client } from '../lib/client'
+import { stats } from '../components/constant'
 
 const Home = ({ banner }) => {
   return (
@@ -21,7 +22,7 @@ const Home = ({ banner }) => {
 
         <div className={ `${styles.boxWidth}` }>
 
-          <Stats />
+          <Stats stats={ stats } />
 
           <Business />
 

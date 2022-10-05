@@ -25,13 +25,11 @@ const NavBar = () => {
 
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
-
-            <h2 className="text-white cursor-pointer text-[25px]">
-                <Link href='/'>
-                    DazBank
-                </Link>
-            </h2>
-
+            <Link href='/'>
+                <h2 className="text-white cursor-pointer text-[30px]">
+                    <span className="text-gradient font-bold">Daz</span>Bank
+                </h2>
+            </Link>
 
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                 { navlinks.map((nav, index) => (
