@@ -23,8 +23,8 @@ const Banner = ({ banner }) => {
                 <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
                     <Image src={ images.Discount } alt="discount" width="32px" height="32px" />
                     <p className={ `${styles.paragraph} ml-2` }>
-                        <span className="text-white">20%</span> Discount For{ " " }
-                        <span className="text-white">1 Month</span> Account
+                        <span className="text-white">40%</span> Discount For{ " " }
+                        <span className="text-white">03 Month</span> Account
                     </p>
                 </div>
 
