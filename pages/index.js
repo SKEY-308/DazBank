@@ -4,7 +4,7 @@ import { Banner, styles, Stats, Business, Billing, CardDeal, Testimonials, Clien
 import { client } from '../lib/client'
 import { stats } from '../components/constant'
 
-const Home = ({ banner }) => {
+const Home = ({ banner, bsbanner }) => {
   return (
     <div>
       <div className={ `bg-primary ${styles.flexStart}` }>
@@ -24,7 +24,8 @@ const Home = ({ banner }) => {
 
           <Stats stats={ stats } />
 
-          <Business />
+          <Business bsbanner={ bsbanner.length && bsbanner[0] } />
+          { console.log(bsbanner) }
 
           <Billing />
 
@@ -48,13 +49,15 @@ const Home = ({ banner }) => {
 export async function getStaticProps() {
 
   const query = '*[_type == "firstbanner"]';
+  const bquery = '*[_type == "bfeatures"]';
 
   // Fetch data from external API
   const banner = await client.fetch(query)
+  const bsbanner = await client.fetch(bquery)
 
 
   // Pass data to the page via props '"const data = await res.json()" jsaickjfai'
-  return { props: { banner } }
+  return { props: { banner, bsbanner } }
 };
 
 export default Home
