@@ -25,6 +25,7 @@ const NavBar = () => {
 
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
+
             <Link href='/'>
                 <h2 className="text-white cursor-pointer text-[30px]">
                     <span className="text-gradient font-bold">Daz</span>Bank
@@ -85,9 +86,6 @@ const NavBar = () => {
                 </div>
 
             </div>
-
-
-
         </nav>
     )
 }
