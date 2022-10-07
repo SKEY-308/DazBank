@@ -4,7 +4,7 @@ import { Banner, styles, Stats, Business, Billing, CardDeal, Testimonials, Clien
 import { client } from '../lib/client'
 import { stats } from '../components/constant'
 
-const Home = ({ banner, bsbanner, billbanner, testbanner }) => {
+const Home = ({ banner, bsbanner, billbanner, testbanner, clientsbanner }) => {
   return (
     <div>
       <div className={ `bg-primary ${styles.flexStart}` }>
@@ -62,8 +62,19 @@ const Home = ({ banner, bsbanner, billbanner, testbanner }) => {
 
           </section>
 
-          <Clients />
+          <section className={ `${styles.flexCenter} my-4` }>
 
+            <div className={ `${styles.flexCenter} flex-wrap w-full` }>
+
+              { clientsbanner.map((client) => (
+
+                <Clients key={ client._id } client={ client } />
+
+              )) }
+
+            </div>
+
+          </section>
           <CTA />
 
         </div>
@@ -81,16 +92,18 @@ export async function getStaticProps() {
   const bquery = '*[_type == "bfeatures"]';
   const bilquery = '*[_type == "tbanner"]';
   const testquery = '*[_type == "feedback"]';
+  const clientsquery = '*[_type == "clients"]';
 
   // Fetch data from external API
   const banner = await client.fetch(query)
   const bsbanner = await client.fetch(bquery)
   const billbanner = await client.fetch(bilquery)
   const testbanner = await client.fetch(testquery)
+  const clientsbanner = await client.fetch(clientsquery)
 
 
   // Pass data to the page via props '"const data = await res.json()" jsaickjfai'
-  return { props: { banner, bsbanner, billbanner, testbanner } }
+  return { props: { banner, bsbanner, billbanner, testbanner, clientsbanner } }
 };
 
 export default Home
