@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
+// import { Link } from 'react-scroll'
 
 
 import images from './images'
@@ -42,7 +43,15 @@ const NavBar = () => {
                         onClick={ () => setActive(nav) }
                     >
 
-                        <Link href={ `#${nav}` }>
+                        <Link href={ `#${nav}` }
+                        // activeClass={ active }
+                        // to={ nav.path }
+                        // spy={ true }
+                        // smooth={ true }
+                        // offset={ -70 }
+                        // duration={ 500 }
+                        // key={ index }
+                        >
                             { nav }
                         </Link>
 
