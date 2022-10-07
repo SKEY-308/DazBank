@@ -13,9 +13,10 @@ import users from './users';
 import bfeatures from './bfeatures';
 import features from './features';
 import feedback from './feedback';
+import clients from './clients';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([firstbanner, val, users, features, bfeatures, tbanner, iconus, feedback]),
+  types: schemaTypes.concat([firstbanner, val, users, features, bfeatures, tbanner, iconus, feedback, clients]),
 })
