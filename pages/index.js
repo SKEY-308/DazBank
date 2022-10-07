@@ -32,7 +32,7 @@ const Home = ({ banner, bsbanner, billbanner, testbanner }) => {
 
           <CardDeal />
 
-          <Testimonials feedback={ feedback } />
+          <Testimonials feedback={ feedback.length && feedback[0] } />
           { console.log(feedback) }
 
           <Clients />

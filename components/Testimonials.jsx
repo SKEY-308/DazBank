@@ -28,11 +28,11 @@ const Testimonials = ({ feedback }) => {
 
             </div>
 
-            {/*<div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
-                { feedback.map((card, index) =>
+            <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
+                { [feedback].map((card, index) =>
 
                     <div key={ index } className="flex justify-between flex-col px-10 py-12 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
-                        <img src={ card.images.quotes } alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
+                        <img src={ images.quotes } alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
                         <p className="font-poppins font-normal text-[18px] leading-[32.4px] text-white my-10">
                             { card.content }
                         </p>
@@ -51,7 +51,7 @@ const Testimonials = ({ feedback }) => {
                     </div>
 
                 ) }
-                </div>*/}
+            </div>
         </section>
     )
 }
