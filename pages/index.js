@@ -75,6 +75,7 @@ const Home = ({ banner, bsbanner, billbanner, testbanner, clientsbanner }) => {
             </div>
 
           </section>
+
           <CTA />
 
         </div>
